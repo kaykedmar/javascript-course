@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light ON or OFF</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    button {
+
+      cursor: pointer;
+
+      border: none;
+      padding: 10px 15px;
+      font-size: 15px;
+      border-radius: 7px;
+      font-weight: 700;
+
+    }
+
+    .button-off {
+      background-color: rgb(247, 59, 2);
+    }
+
+    .button-on {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <img id="light" src="img/light-off.jpg" alt="">
+
+    <button class="button-off" id="light"
+      onclick="document.getElementById('light').src='img/light-off.jpg'">OFF</button>
+
+    <button class="button-on" id="light" onclick="document.getElementById('light').src='img/light-on.jpg'">ON</button>
+
+  </main>
+</body>
+
+</html>
