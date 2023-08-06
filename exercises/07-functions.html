@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +7,24 @@
 </head>
 <body>
   <script>
+  /*
     function function1 () { 
       console.log ('Hello World');
-
+      console.log (2+2);
     }
+ 
+    function1()
+    function1()
+  */ 
 
   
-
+  // uso de Parametros 
+  function calculateTax (cost, taxCost = 0.2) {
+    console.log (cost * taxCost) 
    
-
-    function1()
+  }
+  calculateTax(5000, 0.1); 
+  calculateTax(5000)
   </script>
 </body>
 </html>

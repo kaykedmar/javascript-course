@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Rock Paper Scissors</title>
 </head>
 
 <body>
+
+  <h3>Rock Paper Scissors </h3>
+
   <button onclick="
 
   playerGamer('Rock')
@@ -29,6 +32,14 @@
   playerGamer('Scissors')
 
   ">Scissors</button>
+
+  <button onclick="
+    score.wins = 0;
+    score.losses = 0; 
+    score.ties = 0;
+  
+  ">
+  Reset Score</button>
 
   <script>
   function playerGamer(playerMove) {
@@ -63,8 +74,26 @@
       }
     }
 
-    alert(`You picked ${playerMove} and computer picked ${computerMove}. ${result}`);
-  }
+
+    // Resultado de vitorias e derrotas
+      if (result === 'You win') { 
+        score.wins += 1; 
+      } else if (result === 'You lose') { 
+        score.losses += 1; 
+      } else if (result === 'Tie') { 
+        score.ties += 1;
+      }
+
+
+      alert(`You picked ${playerMove} and computer picked ${computerMove}. ${result}
+Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);}
+
+    const score = { 
+      wins: 0, 
+      losses: 0, 
+      ties: 0, 
+    }
+
 
     //function cria uma funçao com o nome pickComputerMove, onde usei ela para minimizar meu codigo
     function pickComputerMove() {
