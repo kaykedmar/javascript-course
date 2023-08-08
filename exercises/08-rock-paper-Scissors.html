@@ -42,7 +42,10 @@
   Reset Score</button>
 
   <script>
+    const score = JSON.parse(localStorage.getItem('score'));
+    
   function playerGamer(playerMove) {
+ 
     const computerMove = pickComputerMove();
     let result = '';
 
@@ -84,20 +87,18 @@
         score.ties += 1;
       }
 
-
+      localStorage.setItem('score', JSON.stringify(score));
+    
       alert(`You picked ${playerMove} and computer picked ${computerMove}. ${result}
-Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);}
+Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);
 
-    const score = { 
-      wins: 0, 
-      losses: 0, 
-      ties: 0, 
-    }
+  }
+  
 
 
     //function cria uma funçao com o nome pickComputerMove, onde usei ela para minimizar meu codigo
     function pickComputerMove() {
-
+  
 
       const randomNumber = Math.random();
       let computerMove = '';
@@ -110,9 +111,17 @@ Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);}
       } else if (randomNumber >= 2 / 3 && randomNumber < 3 / 3) {
         computerMove = 'Scissors';
       }
+  
+      const score = { 
+          wins: 0, 
+          losses: 0, 
+          ties: 0, 
+        }
 
       return computerMove;
       return result;
+
+  
     }
   </script>
 </body>
