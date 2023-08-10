@@ -8,11 +8,18 @@
 <body>
 
   <button>Hello World</button>
-
+  <button class="js-olamundo">Ola mundo</button>
   <script>
 
-    console.log(document.queryse('button'))
+    console.log(document.querySelector
+      ('button').innerHTML);
 
+    const jsolamundo = (document.querySelector
+      ('.js-olamundo').innerHTML);  
+
+    console.log('jsolamundo');
+
+    
     /*
     document.body.innerHTML = 'Ola múndo'
     document.title = 'Good Job!'
