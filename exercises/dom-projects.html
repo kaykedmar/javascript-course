@@ -6,20 +6,52 @@
   <title>Dom Projects</title>
 </head>
 <body>
+
   <button onclick="
   
-    buttonSubscribe()
+    buttonSubscribe();
 
     "class="subscribe-button">
-    Subscribe</button>
+    Subscribe</button> <br><br>
 
 
+    <p>Calculadora de envio da Amazon</p>
+    <p>Pedidos abaixo de $ 40 = + $ 10 de frete</p>
+    <p>Pedidos acima de $ 40 = Frete GRÁTIS</p>
 
+    <input type="text" placeholder="Cost of orden" class="js-input">
+
+    <button onclick="
+    calculateTotal ()"
+
+    >Calcular</button>
+
+    <p class="resultado">$</p>
   
 
 
   <script>
-    function buttonSubscribe (button) { 
+
+    function calculateTotal () { 
+      const input = document.querySelector('.js-input')
+
+      let cost = Number(input.value); 
+
+      if(cost <= 40) { 
+        cost = cost +  10;
+      } 
+
+      document.querySelector('.resultado').innerHTML = (`$${cost}`)
+      
+    }
+
+
+
+
+
+
+    //Funçao do botao Subscribe
+    function buttonSubscribe () { 
       const elementSubscribe = document.querySelector('.subscribe-button'); 
     if (elementSubscribe.innerHTML ===
          'Subscribe') { 
@@ -27,8 +59,17 @@
 
     } else { 
       elementSubscribe.innerHTML = 'Subscribe'
-  }
+  } 
     }
+
+
+   
+    
+
+
+
+
+
   </script>
 </body>
 </html>
