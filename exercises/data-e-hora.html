@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data e Hours</title>
+  <style>
+
+    body { 
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      background-color: rgb(48, 52, 54);
+      background-image: url('img/bodyfundo.jpg');
+      background-position: center center;
+      height: 98vh;
+    }
+
+    main  { 
+      display: flex;
+      flex-direction: column;
+      margin-left: 50px;
+      padding: 30px;
+      border-radius: 30px;
+ 
+      
+      width: 600px;
+      background-color: rgba(0, 0, 0, 0.418);
+    }
+
+    /* Alinhamento no Centro  */
+    .js-platao-horas { 
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+    }
+    
+    .horas-dias { 
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2, h3 { 
+      color: white;
+      border-bottom: 1px solid rgb(141, 33, 230);
+     
+    }
+
+    /* Photo */
+    #platao-js { 
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    /* Tamanho da Hora mostrada */
+    #js-hours { 
+      font-size: 40px;
+      margin: 0;
+    }
+
+    #js-aviso { 
+      margin: 0;
+    }
+ 
+    #js-days { 
+      margin: 0;
+    }
+
+    p { 
+      font-size: 20px;
+      color: white;
+    }
+    
+    @media (max-width: 768px) { 
+      main { 
+     
+   
+   
+   
+      }
+
+  
+    }
+
+  </style>
+</head>
+<body>
+
+  <main>
+  <div class="js-platao-horas">
+  <span id="js-photo"><img id="platao-js" src="img/platao.webp" alt=""></span>
+  <div class="horas-dias">
+    <h3>Diga-los a hora Platao!:</h3>
+  <p id="js-aviso">Agora e:</p>
+  <p id="js-hours"></p>
+  <p id="js-days"></p>
+</div>
+</div>
+
+  <div class="sobre-platao">
+  <h2>Conheça Platao</h2>
+  <p>
+    Biografia de Platão
+    Platão (427-347 a.C.) foi um filósofo grego da antiguidade, considerado um dos principais pensadores da história da filosofia. Era discípulo do filósofo Sócrates.
+    
+  </p>
+  <p>Sua filosofia é baseada na teoria de que o mundo que percebemos com nossos sentidos é um mundo ilusório, confuso. O mundo espiritual é mais elevado, eterno, onde o que existe verdadeiramente são as ideias, que só a razão pode conhecer.</p>
+  
+  <p>
+    Infância e juventude
+    Platão nasceu em Atenas, Grécia, provavelmente no ano 427 a.C. Pertencia a uma das mais nobres famílias de Atenas.
+  </p>
+  
+  <p>Como todo aristocrata de sua época, recebeu educação especial, estudou leitura e escrita, música, pintura, poesia e ginástica Era excelente atleta, participou dos jogos olímpicos como lutador.</p>
+  
+  <p>Seu nome verdadeiro era Arístocles, mas recebeu o apelido de “Platão”, que em grego significa “ombros largos”.</p>
+  
+  <p>Por tradição de família, Platão desejava dedicar-se à vida pública e fazer uma brilhante carreira politica, como descreveu em uma de suas muitas cartas.</p>
+</div>
+</main>
+
+
+  <script>
+       horasSegundos()
+  
+    function horasSegundos() { 
+      const dataAtual = new Date();
+      
+      const hora = dataAtual.getHours();
+      const minutos = dataAtual.getMinutes();
+      const days = dataAtual.getFullYear(); 
+      document.querySelector("#js-hours").innerHTML = hora + ":" + minutos;
+      document.getElementById("js-days").innerHTML = days
+     
+      if (hora < 20) { 
+        document.getElementById("js-photo").src='img/segundoplatao.webp'; 
+      } 
+      }
+  </script>
+</body>
+</html>
