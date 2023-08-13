@@ -11,13 +11,31 @@
       color: white;
       padding: 8px 15px;
       border-radius: 20px;
+      border: none;
     }
 
     .is-subscribed { 
-      background-color: white;
+      background-color: gray;
       color: black;
       font-weight: bold;
+
+
+     
     }
+
+    .css-input { 
+      padding: 10px;
+      font-size: 15px;
+    }
+
+    .css-calculate { 
+      padding: 13px;
+      border: none;
+      background-color: green;
+      border-radius: 5px;
+      
+    }
+
   </style>
 </head>
 
@@ -36,16 +54,15 @@
   <p>Pedidos acima de $ 40 = Frete GRÁTIS</p>
 
 
-
-  <input type="text" placeholder="Cost of orden" class="js-input" 
+  <input type="text" placeholder="Cost of orden" class="js-input css-input" 
     onkeydown="
     eventEnter(event)
     ">
 
   <button onclick="
-    calculateTotal ()">Calcular</button>
+    calculateTotal ()" class="css-calculate">Calcular</button>
 
-  <p class="resultado"></p>
+  <p class="resultado "></p>
 
 
 
@@ -64,27 +81,29 @@
     function calculateTotal() {
       const input = document.querySelector('.js-input')
 
+      // input.value usado para acessar o valor de dentro do input
       let cost = Number(input.value);
 
       if (cost <= 40) {
         cost = cost + 10;
       }
 
+      // usado para mostrar o resultado do codigo acima
       document.querySelector('.resultado').innerHTML = (`$${cost}`)
 
     }
 
 
-    //Funçao do botao Subscribe
+    //Funçao feita para adicionar e remover uma class quando a açao e executada
     function buttonSubscribe() {
       const elementSubscribe = document.querySelector('.subscribe-button');
       if (elementSubscribe.innerHTML === 'Subscribe') {
-        elementSubscribe.innerHTML = 'Subscribed'
-        elementSubscribe.classList.add ('is-subscribed')
+        elementSubscribe.innerHTML = 'Subscribed';
+        elementSubscribe.classList.add ('is-subscribed');
       
       } else {
-        elementSubscribe.innerHTML = 'Subscribe'
-        elementSubscribe.classList.remove('is-subscribed')
+        elementSubscribe.innerHTML = 'Subscribe';
+        elementSubscribe.classList.remove('is-subscribed');
       }
     }
 
