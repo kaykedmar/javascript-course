@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+  <h1>Rock Paper Scissors</h1>
+
+  <button class="move-button" onclick="playerGamer('Rock')"><img src="../exercises/img/rock-emoji.png" alt=""
+      class="move-icon"></button>
+
+  <button class="move-button" onclick="playerGamer('paper')"><img src="../exercises/img/paper-emoji.png" alt=""
+      class="move-icon"></button>
+
+  <button class="move-button" onclick="playerGamer('Scissors')"><img src="../exercises/img/scissors-emoji.png" alt=""
+      class="move-icon"></button>
+
+  <button onclick="
+  // Codigo abaixo serve para resetar a pontuaçao, 
+   score = { 
+      wins: 0, 
+      losses: 0, 
+      ties: 0 };
+
+      updateElementScore();
+  " class="reset-score">Reset Score</button>
+
+  <p class="js-youPicked">
+
+  </p>
+  <p class="js-result result">
+
+  </p>
+
+  <p class="js-score" onclick=""></p>
+
+  <script src="script.js"></script>
+  <footer>By Kayk Incrivel</footer>
+</body>
+
+</html>
