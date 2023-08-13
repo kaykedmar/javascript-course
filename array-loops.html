@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Array And Loops</title>
 </head>
 <body>
-  
+  <script>
+    // Um array
+    const myArray = [10, 20, 30]
+    console.log(myArray)
+
+    // Substitui o valor 20 do array [2], por 99
+    myArray[2] = 99; 
+    console.log(myArray)
+
+    // Pop, retira o primeiro valor do começo da array
+    myArray.pop()
+    console.log(myArray)
+
+    // Push Adiciona um valor no final do Array
+    myArray.push(100)
+    console.log(myArray)
+
+    
+     //  array.splice(startIndex, deleteCount, item1, item2, ...);
+    let fruits = ['apple', 'banana', 'orange', 'grape'];
+      fruits.splice(1, 2); // Remove 'banana' e 'orange'
+      // Resultado: fruits = ['apple', 'grape']
+       console.log(fruits)
+     
+  </script>
 </body>
 </html>
