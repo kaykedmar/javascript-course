@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom Projects</title>
+  <style>
+    .css-subscribe-button { 
+      background-color: black;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+
+    .is-subscribed { 
+      background-color: white;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="
+  
+    buttonSubscribe();
+
+    " class="subscribe-button css-subscribe-button">
+    Subscribe</button> <br><br>
+
+
+  <p>Calculadora de envio da Amazon</p>
+  <p>Pedidos abaixo de $ 40 = + $ 10 de frete</p>
+  <p>Pedidos acima de $ 40 = Frete GRÁTIS</p>
+
+
+
+  <input type="text" placeholder="Cost of orden" class="js-input" 
+    onkeydown="
+    eventEnter(event)
+    ">
+
+  <button onclick="
+    calculateTotal ()">Calcular</button>
+
+  <p class="resultado"></p>
+
+
+
+  <script>
+
+    // Funçao para usar a tecla Enter para enviar dados
+    function eventEnter(event) {
+      console.log(event.key)
+      if (event.key === 'Enter') {
+        calculateTotal()
+      }
+    }
+
+
+    //Funçao para calcular o frete
+    function calculateTotal() {
+      const input = document.querySelector('.js-input')
+
+      let cost = Number(input.value);
+
+      if (cost <= 40) {
+        cost = cost + 10;
+      }
+
+      document.querySelector('.resultado').innerHTML = (`$${cost}`)
+
+    }
+
+
+    //Funçao do botao Subscribe
+    function buttonSubscribe() {
+      const elementSubscribe = document.querySelector('.subscribe-button');
+      if (elementSubscribe.innerHTML === 'Subscribe') {
+        elementSubscribe.innerHTML = 'Subscribed'
+        elementSubscribe.classList.add ('is-subscribed')
+      
+      } else {
+        elementSubscribe.innerHTML = 'Subscribe'
+        elementSubscribe.classList.remove('is-subscribed')
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>
