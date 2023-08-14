@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 02</title>
+  <style>
+    input { 
+      display: block;
+    
+    }
+
+    label { 
+      font-size: 10px;
+    }
+
+    button { 
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="caixa-usuario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome">
+      
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha">
+      <button onclick="validarUsuario()">Entrar</button>
+    </div>
+  </main>
+
+ 
+
+  <script src="dom02.js"></script>
+</body>
+</html>
