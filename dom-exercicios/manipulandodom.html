@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Loja</title>
+  <style>
+    body {
+      background-color: gray;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      background-color: rgba(0, 0, 0, 0.945);
+      width: 400px;
+     padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+
+    p {
+      padding: 10px;
+    }
+
+    .menu {
+      cursor: pointer;
+      text-align: center;
+      background-color: black;
+
+    }
+
+    .primeiro,
+    .segundo,
+    .terceiro,
+    .quarto {
+      display: inline-block;
+      background-color: transparent;
+      margin-left: 10px;
+      padding: 5px 10px;
+
+    }
+
+    .css-mod {
+      background-color: rgb(163, 161, 161);
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Compre Coisas</h1>
+    <div class="info">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet rerum inventore eaque quos eos modi odio,
+        explicabo cumque autem consectetur veniam a sit dolor? Doloremque accusamus id quos vel placeat? Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Quia dolor iusto odio, nihil quasi earum, architecto officia
+        laboriosam explicabo eum perferendis aperiam minima ad culpa sunt. Ipsam doloribus error deleniti?</p>
+    </div>
+    <div class="menu">
+      <span class="primeiro js-primeiro" onclick="
+        buttonClick(this)
+        
+        ">1</span>
+      <span class="segundo js-segundo" onclick="
+      buttonClick(this)
+      
+      ">2</span>
+      <span class="terceiro js-terceiro" onclick="
+      buttonClick(this)
+      
+      ">3</span>
+      <span class="quarto js-quarto" onclick="
+      buttonClick(this)
+      
+      ">4</span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
